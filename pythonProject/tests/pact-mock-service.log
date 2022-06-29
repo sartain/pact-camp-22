@@ -1,0 +1,22 @@
+I, [2022-06-29T16:53:26.762140 #26598]  INFO -- : Cleared interactions
+I, [2022-06-29T16:53:26.766995 #26598]  INFO -- : Registered expected interaction GET /todo/123
+D, [2022-06-29T16:53:26.767151 #26598] DEBUG -- : {
+  "description": "An order for cheese",
+  "providerState": "Empty todo list",
+  "request": {
+    "method": "get",
+    "path": "/todo/123"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 123,
+      "todo": [
+        "Cheese"
+      ]
+    }
+  },
+  "metadata": null
+}
