@@ -1,0 +1,50 @@
+I, [2022-06-30T11:06:28.585765 #11369]  INFO -- : Cleared interactions
+I, [2022-06-30T11:06:28.590393 #11369]  INFO -- : Registered expected interaction GET /todo/123
+D, [2022-06-30T11:06:28.590508 #11369] DEBUG -- : {
+  "description": "An order for cheese",
+  "providerState": "Empty todo list",
+  "request": {
+    "method": "get",
+    "path": "/todo/123"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 123,
+      "todo": [
+        "Cheese"
+      ]
+    }
+  },
+  "metadata": null
+}
+I, [2022-06-30T11:06:28.594556 #11369]  INFO -- : Received request GET /todo/123
+D, [2022-06-30T11:06:28.594653 #11369] DEBUG -- : {
+  "path": "/todo/123",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.28.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-06-30T11:06:28.594962 #11369]  INFO -- : Found matching response for GET /todo/123
+D, [2022-06-30T11:06:28.595059 #11369] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 123,
+    "todo": [
+      "Cheese"
+    ]
+  }
+}
+I, [2022-06-30T11:06:28.598886 #11369]  INFO -- : Verifying - interactions matched
+I, [2022-06-30T11:06:28.602759 #11369]  INFO -- : Writing pact for Provider to /Users/alsa/Documents/pact-camp-22/consumer-provider.json

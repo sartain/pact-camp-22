@@ -1,0 +1,50 @@
+I, [2022-06-30T09:45:17.378446 #2321]  INFO -- : Cleared interactions
+I, [2022-06-30T09:45:17.382810 #2321]  INFO -- : Registered expected interaction GET /todo/123
+D, [2022-06-30T09:45:17.382914 #2321] DEBUG -- : {
+  "description": "An order for cheese",
+  "providerState": "Empty todo list",
+  "request": {
+    "method": "get",
+    "path": "/todo/123"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 123,
+      "todo": [
+        "Cheese"
+      ]
+    }
+  },
+  "metadata": null
+}
+I, [2022-06-30T09:45:17.386955 #2321]  INFO -- : Received request GET /todo/123
+D, [2022-06-30T09:45:17.387047 #2321] DEBUG -- : {
+  "path": "/todo/123",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.28.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-06-30T09:45:17.387390 #2321]  INFO -- : Found matching response for GET /todo/123
+D, [2022-06-30T09:45:17.387463 #2321] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 123,
+    "todo": [
+      "Cheese"
+    ]
+  }
+}
+I, [2022-06-30T09:45:17.391297 #2321]  INFO -- : Verifying - interactions matched
+I, [2022-06-30T09:45:17.395018 #2321]  INFO -- : Writing pact for Provider to /Users/alsa/Documents/pact-camp-22/pythonProject/tests/consumer-provider.json
