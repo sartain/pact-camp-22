@@ -1,5 +1,11 @@
 import atexit
 import unittest
+import requests
+
+
+def todo(item_id):
+    uri = 'http://localhost:1234/todo/' + item_id
+    return requests.get(uri).json()
 
 from pact import Consumer, Provider
 
@@ -26,3 +32,6 @@ class TodoContractTests(unittest.TestCase):
       result = todo('123')
 
     self.assertEqual(result, expected)
+
+if __name__=="__main__":
+    unittest.main()

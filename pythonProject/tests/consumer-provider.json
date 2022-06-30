@@ -1,0 +1,34 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "An order for cheese",
+      "providerState": "Empty todo list",
+      "request": {
+        "method": "get",
+        "path": "/todo/123"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 123,
+          "todo": [
+            "Cheese"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
