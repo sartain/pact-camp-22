@@ -4,7 +4,6 @@ from flask import jsonify, request
 
 from exampleProvider.src.provider import app, fakedb
 
-
 @app.route("/_pact/provider_states", methods=["POST"])
 def provider_states():
     """Implement the "functionality" to change the state, to prepare for a test.
@@ -21,8 +20,7 @@ def provider_states():
     source separate.
     """
     mapping = {
-        "UserA does not exist": setup_no_user_a,
-        "UserA exists and is not an administrator": setup_user_a_nonadmin,
+        "Empty todo list": setup_user_a_nonadmin
     }
     mapping[request.json["state"]]()
     return jsonify({"result": request.json["state"]})
@@ -38,7 +36,7 @@ def setup_user_a_nonadmin():
     some_date = "2016-12-15T20:16:01"
     ip_address = "198.0.0.1"
 
-    fakedb["123"] = {"id": "123", "todo": ["Cheese"]}
+    fakedb = {"id": "123", "todo": ["Cheese"]}
 
 
 if __name__ == "__main__":

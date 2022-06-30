@@ -29,7 +29,7 @@ class ProviderTest(unittest.TestCase):
 
     def test_user_service_provider_against_pact(self):
 
-        verifier = Verifier(provider="UserService", provider_base_url=PROVIDER_URL)
+        verifier = Verifier(provider="Provider", provider_base_url=PROVIDER_URL)
         # Rather than requesting the Pact interactions from the Pact Broker, this
         # will perform the verification based on the Pact file locally.
         #
@@ -40,9 +40,7 @@ class ProviderTest(unittest.TestCase):
         output, _ = verifier.verify_pacts(
             "../tests/consumer-provider.json",
             verbose=False,
-            provider_states_setup_url="{}/_pact/provider_states".format(PROVIDER_URL),
         )
-
         assert output == 0
 
 if __name__=="__main__":
